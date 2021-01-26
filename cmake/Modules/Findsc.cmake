@@ -14,7 +14,7 @@
 #
 # Imported Targets
 # ^^^^^^^^^^^^^^^^
-#   sc::sc
+#   SC::SC
 
 
 find_path (sc_INCLUDE_DIR
@@ -33,10 +33,10 @@ if (sc_FOUND)
   set(sc_INCLUDE_DIRS ${sc_INCLUDE_DIR})
 endif()
 
-if(sc_FOUND AND NOT TARGET sc::sc)
-    add_library(sc::sc INTERFACE IMPORTED)
+if(sc_FOUND AND NOT TARGET SC::SC)
+    add_library(SC::SC INTERFACE IMPORTED)
 
-    set_target_properties(sc::sc PROPERTIES
+    set_target_properties(SC::SC PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${sc_INCLUDE_DIRS}"
         INTERFACE_LINK_LIBRARIES "${sc_LIBRARY}"
     )
